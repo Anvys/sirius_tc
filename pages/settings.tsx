@@ -87,7 +87,7 @@ const Settings = () => {
         <MainLayout>
             <StyledSettings>
                 <StyledSettingWnd>
-                    <div>{`dif: ${diff} val: ${val} asc: ${asc}`}</div>
+                    {/*<div>{`dif: ${diff} val: ${val} asc: ${asc}`}</div>*/}
                     <RangeInput text={'Кол-во предметов'} values={[ 2, 3, 4, 5]} onChange={onDifChange} initVal={diff}/>
                     <RangeInput text={'Значения'} values={['A', '9', '19', '50', '99', '999']} onChange={onValChange} initVal={val}/>
                     <StyledButtonLine>
