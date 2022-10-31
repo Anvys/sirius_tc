@@ -55,7 +55,7 @@ export const RangeInput: React.FC<TProps> = (props) => {
     return (
         <StyledRangeInput {...rest} count={values.length}>
             <label>{`${text}`}</label>
-            <StyledRangeTips>{values.map(v => <div style={{minWidth:`20px`}}>{v}</div>)}</StyledRangeTips>
+            <StyledRangeTips>{values.map((v,i) => <div key={i} style={{minWidth:`20px`}}>{v}</div>)}</StyledRangeTips>
             <StyledInput type={'range'} min={0} max={values.length - 1} value={range}
                          onChange={e => setRange(+e.target.value)} />
         </StyledRangeInput>

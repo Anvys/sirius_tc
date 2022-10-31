@@ -22,7 +22,7 @@ const StyledPlayGround = styled.button<{ rnd: number }>`
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   padding: 20px;
@@ -103,13 +103,18 @@ export const PlayGround: React.FC<TProps> = memo((props) => {
         <StyledPlayGround {...rest} rnd={rnd}>
             {!isOver
                 ? <>
-                    <ItemStartPlace
-                        children={remainItems.map((v, i) =>
-                            <DraggableItem key={v.id} item={v} pos={i} onItemStartDrag={onItemStartDrag}/>)}/>
+                    <ItemStartPlace>
+                        {remainItems.map((v, i) =>
+                            <DraggableItem key={v.id} item={v} pos={i} onItemStartDrag={onItemStartDrag}/>)}
+                    </ItemStartPlace>
                     <StyledTargetFragment>
                         <AscDesc asc={asc}/>
-                        <TargetPlace rnd={rnd} children={targetPlaceItems.map((v, i) =>
-                            <TargetItem key={v.id} item={v} onDropHandler={onTargetDropHandler}/>)}/>
+                        {/*<TargetPlace rnd={rnd} children={targetPlaceItems.map((v, i) =>*/}
+                        {/*    <TargetItem key={v.id} item={v} onDropHandler={onTargetDropHandler}/>)}/>*/}
+                        <TargetPlace rnd={rnd}>
+                            {targetPlaceItems.map((v, i) =>
+                            <TargetItem key={v.id} item={v} onDropHandler={onTargetDropHandler}/>)}
+                        </TargetPlace>
                     </StyledTargetFragment>
                 </>
                 : <FinalForm/>}
