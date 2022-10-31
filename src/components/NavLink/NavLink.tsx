@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "@emotion/styled";
 import Link from "next/link";
+import NavBar from "../NavBar/NavBar";
 
 const StyledNavLink = styled.div`
   padding: 5px 10px;
@@ -21,3 +22,5 @@ export const NavLink:React.FC<TProps> = (props) => {
         <StyledNavLink {...rest}><Link href={href}>{text}</Link></StyledNavLink>
     )
 }
+NavLink.displayName = 'NavLink'
+export default NavLink

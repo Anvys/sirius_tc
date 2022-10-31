@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "@emotion/styled";
+import RangeInput from "../RangeInput/RangeInput";
 
 const StyledSettingButton = styled.button<{bType: 'set' | 'game', active: boolean}>`
   font-family: Calibri, sans-serif;
@@ -32,3 +33,5 @@ export const SettingButton:React.FC<TProps> = (props) => {
         <StyledSettingButton {...rest}>{text}</StyledSettingButton>
     )
 }
+SettingButton.displayName = 'SettingButton'
+export default SettingButton

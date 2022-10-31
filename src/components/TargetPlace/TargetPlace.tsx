@@ -1,6 +1,7 @@
 import React, {memo} from 'react'
 import styled from "@emotion/styled";
 import {getTargetPlaceBG} from "../../utils/getTargetPlaceBG";
+import TargetItem from "../TargetItem/TargetItem";
 
 const StyledTargetPlace = styled.div<{ rnd: number }>`
   box-sizing: border-box;
@@ -25,3 +26,5 @@ export const TargetPlace: React.FC<TProps> = memo((props) => {
         <StyledTargetPlace {...rest}>{children}</StyledTargetPlace>
     )
 })
+TargetPlace.displayName = 'TargetPlace'
+export default TargetPlace

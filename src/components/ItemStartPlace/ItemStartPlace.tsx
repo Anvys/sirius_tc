@@ -1,5 +1,6 @@
 import React, {memo} from 'react'
 import styled from "@emotion/styled";
+import FinalForm from "../FinalForm/FinalForm";
 
 const StyledItemStartPlace = styled.div`
   display: flex;
@@ -18,3 +19,5 @@ export const ItemStartPlace: React.FC<TProps> = memo((props) => {
         </StyledItemStartPlace>
     )
 })
+ItemStartPlace.displayName = 'ItemStartPlace'
+export default ItemStartPlace

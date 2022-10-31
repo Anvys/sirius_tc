@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "@emotion/styled";
 import {getAscDescBG} from "../../utils/getAscBg";
+import DraggableItem from "../DraggableItem/DraggableItem";
 
 const StyledAscDesc = styled.div<TProps>`
   width: calc(100% * 358 / 980);
@@ -19,3 +20,5 @@ export const AscDesc:React.FC<TProps> = (props) => {
         <StyledAscDesc {...rest}/>
     )
 }
+AscDesc.displayName = 'AscDesc'
+export default AscDesc

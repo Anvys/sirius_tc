@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "@emotion/styled";
 import {NavLink} from "../NavLink/NavLink";
+import MainLayout from "../MainLayout/MainLayout";
 
 const StyledNavBar = styled.div`
   display: flex;
@@ -19,3 +20,5 @@ export const NavBar: React.FC<TProps> = (props) => {
         </StyledNavBar>
     )
 }
+NavBar.displayName = 'NavBar'
+export default NavBar

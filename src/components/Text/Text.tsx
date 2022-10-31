@@ -1,5 +1,6 @@
 import React, {memo} from 'react'
 import styled from "@emotion/styled";
+import TargetPlace from "../TargetPlace/TargetPlace";
 
 const StyledText = styled.span`
   font-family: Calibri, serif;
@@ -21,3 +22,5 @@ export const Text: React.FC<TProps> = memo((props) => {
         <StyledText {...rest}>{text}</StyledText>
     )
 })
+Text.displayName = 'Text'
+export default Text

@@ -45,3 +45,5 @@ export const DraggableItem: React.FC<TProps> = memo((props) => {
         </StyledDraggableItem>
     )
 })
+DraggableItem.displayName = 'DraggableItem'
+export default DraggableItem

@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import {getBackGround} from "../../utils/getIcon";
 import {useRouter} from "next/router";
 import {getAudio} from "../../utils/getAudio";
+import AscDesc from "../AscDesc/AscDesc";
 
 const StyledFinalForm = styled.a`
   background: url(${getBackGround('final')}) center / contain no-repeat;
@@ -35,3 +36,5 @@ export const FinalForm: React.FC<TProps> = (props) => {
         <StyledFinalForm {...rest} href={'/settings'} onClick={onClick}/>
     )
 }
+FinalForm.displayName = 'FinalForm'
+export default FinalForm

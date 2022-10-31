@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "@emotion/styled";
 import {NavBar} from "../NavBar/NavBar";
+import ItemStartPlace from "../ItemStartPlace/ItemStartPlace";
 
 const StyledMainLayout = styled.div`
   display: flex;
@@ -20,3 +21,5 @@ export const MainLayout: React.FC<TProps> = (props) => {
         </StyledMainLayout>
     )
 }
+MainLayout.displayName = 'MainLayout'
+export default MainLayout

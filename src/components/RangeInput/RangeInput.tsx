@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import styled from "@emotion/styled";
+import PlayGround from "../PlayGround/PlayGround";
 
 const StyledRangeInput = styled.div<{count: number}>`
   color: #111111;
@@ -60,3 +61,5 @@ export const RangeInput: React.FC<TProps> = (props) => {
         </StyledRangeInput>
     )
 }
+RangeInput.displayName = 'RangeInput'
+export default RangeInput

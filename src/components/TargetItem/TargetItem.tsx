@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import {Text} from "../Text/Text";
 import {theme} from "../../utils/theme";
 import {TItem} from "../../utils/Types";
+import SettingButton from "../SettingButton/SettingButton";
 
 const StyledTargetItem = styled.div<TSProps>`
   width: 100px;
@@ -42,3 +43,5 @@ export const TargetItem: React.FC<TProps> = (props) => {
             {...rest}>{props.item.value === 0 ? null : <Text text={props.item.value}/>}</StyledTargetItem>
     )
 }
+TargetItem.displayName = 'TargetItem'
+export default TargetItem

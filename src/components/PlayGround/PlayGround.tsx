@@ -12,6 +12,7 @@ import {FinalForm} from "../FinalForm/FinalForm";
 import {getPlayGroundBG} from "../../utils/getPlayGroundBG";
 import {AscDesc} from "../AscDesc/AscDesc";
 import {getAudio} from "../../utils/getAudio";
+import NavLink from "../NavLink/NavLink";
 
 const StyledPlayGround = styled.button<{ rnd: number }>`
   position: relative;
@@ -115,4 +116,5 @@ export const PlayGround: React.FC<TProps> = memo((props) => {
         </StyledPlayGround>
     )
 })
+PlayGround.displayName = 'PlayGround'
 export default PlayGround
